@@ -1,4 +1,4 @@
-import { Icon, cards } from '~/components'
+import { Icon, Cards } from '~/components'
 
 export const Profile = () => (
   <div className="">

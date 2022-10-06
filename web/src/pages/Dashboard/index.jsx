@@ -1,4 +1,4 @@
-import { Icon, cards } from '~/components'
+import { Icon, Cards } from '~/components'
 
 export const Dashboard = () => (
   <div className="">
@@ -33,7 +33,7 @@ export const Dashboard = () => (
         </div>
 
         <div className="space-y-4">
-          <cards
+          <Cards
             teamA={{ slug: 'sui' }}
             teamB={{ slug: 'cam' }}
             match={{ time: '07:00' }}
