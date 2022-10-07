@@ -1,4 +1,4 @@
-import { Icon, Cards } from '~/components'
+import { Icon, Cards, DateSelect } from '~/components'
 
 export const Dashboard = () => (
   <>
@@ -17,26 +17,20 @@ export const Dashboard = () => (
       <section id="header" className="bg-red-500 text-white">
         <div className="container max-w-3xl space-y-3 p-4">
           <span>Olá Kaique!</span>
-          <h3 className="text-2xl font-bold">Qual é o seu palpite?</h3>
+          <h3 className="text-2xl font-bold">Crie o seu palpite</h3>
         </div>
       </section>
 
       <section id="content" className="container max-w-3xl p-4 space-y-4">
 
-        <div className="flex space-x-4 items-center justify-center p-4">
-          <Icon name="arrowLeft" className="w-6 text-red-500" />
-          <span className="font-bold">
-            24 de novembro
-          </span>
-          <Icon name="arrowRight" className="w-6 text-red-500" />
+        <DateSelect />
           
-        </div>
 
         <div className="space-y-4">
           <Cards
-            teamA={{ slug: 'sui' }}
-            teamB={{ slug: 'cam' }}
-            match={{ time: '07:00' }}
+            teamA={{ slug: 'cat' }}
+            teamB={{ slug: 'equ' }}
+            match={{ time: '13:00' }}
           />
         </div>  
       </section>

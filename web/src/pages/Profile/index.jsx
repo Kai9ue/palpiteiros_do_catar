@@ -1,9 +1,10 @@
 //import { Fragment } from 'react' //retornar vários elementos dentro de um componente
-import { Icon, Cards } from '~/components'
+import { Icon, Cards, DateSelect } from '~/components'
+
 
 export const Profile = () => (
   <>
-    
+
     <header className="bg-red-500 text-white">
       <div className="container max-w-3xl flex justify-between p-4">
         <img src="/images/logo-fundo-vermelho.svg" className="w-28 md:w-40" />
@@ -28,22 +29,15 @@ export const Profile = () => (
 
         <h3 className="text-xl  text-red-500 font-bold pt-6">Seus palpites</h3>
 
-        <div className="flex space-x-4 items-center justify-center p-4">
-          <Icon name="arrowLeft" className="w-6 text-red-500" />
-          <span className="font-bold">
-            24 de novembro
-          </span>
-          <Icon name="arrowRight" className="w-6 text-red-500" />
-          
-        </div>
+        <DateSelect />
 
         <div className="space-y-4">
           <Cards
-            teamA={{ slug: 'sui'}}
-            teamB={{ slug: 'cam' }}
-            match={{ time: '07:00' }}
+            teamA={{ slug: 'cat' }}
+            teamB={{ slug: 'equ' }}
+            match={{ time: '13:00' }}
           />
-        </div>  
+        </div>
       </section>
     </main>
 
