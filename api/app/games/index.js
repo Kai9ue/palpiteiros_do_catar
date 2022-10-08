@@ -24,4 +24,3 @@ export const list = async ctx => {
     ctx.status = 500
   }
 }
-
