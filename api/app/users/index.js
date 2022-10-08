@@ -1,7 +1,7 @@
 import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
-export const create = async (ctx) => {
+export const create = async ctx => {
   const data = {
     name: ctx.request.body.name,
     username: ctx.request.body.username,
@@ -13,11 +13,24 @@ export const create = async (ctx) => {
     const user = await prisma.user.create({ data })
     ctx.body = user
     ctx.status = 201
-  } 
+  }
   catch (error) {
     console.log(error)
     ctx.body = error
     ctx.status = 500
   }
-
 }
+
+export const list = async ctx => {
+  try {
+    const users = await prisma.user.findMany()
+    ctx.body = users
+    ctx.status = 200
+  }
+  catch (error) {
+    console.log(error)
+    ctx.body = error
+    ctx.status = 500
+  }
+}
+
